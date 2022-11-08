@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New InvoiceLines{% endblock %}
+
+{% block body %}
+    <h1>Create new InvoiceLines</h1>
+
+    {{ include('invoice_lines/_form.html.twig') }}
+
+    <a href="{{ path('app_invoice_lines_index') }}">back to list</a>
+{% endblock %}

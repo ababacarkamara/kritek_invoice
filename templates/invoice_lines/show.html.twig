@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}InvoiceLines{% endblock %}
+
+{% block body %}
+    <h1>InvoiceLines</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ invoice_line.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ invoice_line.description }}</td>
+            </tr>
+            <tr>
+                <th>Quantity</th>
+                <td>{{ invoice_line.quantity }}</td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td>{{ invoice_line.amount }}</td>
+            </tr>
+            <tr>
+                <th>VatAmount</th>
+                <td>{{ invoice_line.vatAmount }}</td>
+            </tr>
+            <tr>
+                <th>TotalWithVat</th>
+                <td>{{ invoice_line.totalWithVat }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_invoice_lines_index') }}">back to list</a>
+
+    <a href="{{ path('app_invoice_lines_edit', {'id': invoice_line.id}) }}">edit</a>
+
+    {{ include('invoice_lines/_delete_form.html.twig') }}
+{% endblock %}
