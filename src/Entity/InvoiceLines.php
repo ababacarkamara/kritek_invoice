@@ -23,13 +23,13 @@ class InvoiceLines
     private ?int $quantity = null;
 
     #[ORM\Column(type: 'decimal', precision: 8, scale: 1)]
-    private ?float $amount = null;
+    private ?string $amount = null;
 
     #[ORM\Column(type: 'decimal', precision: 4, scale: 1)]
-    private ?float $vatAmount = null;
+    private ?string $vatAmount = null;
 
     #[ORM\Column(type: 'decimal', precision: 8, scale: 1)]
-    private ?float $totalWithVat = null;
+    private ?string $totalWithVat = null;
 
     public function getId(): ?int
     {
@@ -72,36 +72,36 @@ class InvoiceLines
         return $this;
     }
 
-    public function getAmount(): ?float
+    public function getAmount(): ?string
     {
         return $this->amount;
     }
 
-    public function setAmount(float $amount): self
+    public function setAmount(string $amount): self
     {
         $this->amount = $amount;
 
         return $this;
     }
 
-    public function getVatAmount(): ?float
+    public function getVatAmount(): ?string
     {
         return $this->vatAmount;
     }
 
-    public function setVatAmount(float $vatAmount): self
+    public function setVatAmount(string $vatAmount): self
     {
         $this->vatAmount = $vatAmount;
 
         return $this;
     }
 
-    public function getTotalWithVat(): ?float
+    public function getTotalWithVat(): ?string
     {
         return $this->totalWithVat;
     }
 
-    public function setTotalWithVat(float $totalWithVat): self
+    public function setTotalWithVat(string $totalWithVat): self
     {
         $this->totalWithVat = $totalWithVat;
 
