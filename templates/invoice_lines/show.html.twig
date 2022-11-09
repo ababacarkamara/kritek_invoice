@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}InvoiceLines{% endblock %}
+{% block title %}Invoice Lines{% endblock %}
 
 {% block body %}
-    <h1>InvoiceLines</h1>
+    <h1>Invoice Lines</h1>
 
     <table class="table">
         <tbody>
@@ -24,19 +24,19 @@
                 <td>{{ invoice_line.amount }}</td>
             </tr>
             <tr>
-                <th>VatAmount</th>
+                <th>VAT Amount</th>
                 <td>{{ invoice_line.vatAmount }}</td>
             </tr>
             <tr>
-                <th>TotalWithVat</th>
+                <th>Total With VAT</th>
                 <td>{{ invoice_line.totalWithVat }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_invoice_lines_index') }}">back to list</a>
+    <a href="{{ path('app_invoice_lines_index') }}">Back to list</a>
 
-    <a href="{{ path('app_invoice_lines_edit', {'id': invoice_line.id}) }}">edit</a>
+    <a href="{{ path('app_invoice_lines_edit', {'id': invoice_line.id}) }}">Edit</a>
 
     {{ include('invoice_lines/_delete_form.html.twig') }}
 {% endblock %}

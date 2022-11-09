@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}InvoiceLines index{% endblock %}
+{% block title %}Invoice Lines index{% endblock %}
 
 {% block body %}
     <h1>InvoiceLines index</h1>
@@ -12,8 +12,8 @@
                 <th>Description</th>
                 <th>Quantity</th>
                 <th>Amount</th>
-                <th>VatAmount</th>
-                <th>TotalWithVat</th>
+                <th>VAT Amount</th>
+                <th>Total With VAT</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -33,7 +33,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="7">no records found</td>
+                <td colspan="7">No records found</td>
             </tr>
         {% endfor %}
         </tbody>
